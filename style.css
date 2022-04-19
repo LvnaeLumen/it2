@@ -36,6 +36,10 @@ body {
   background-repeat: no-repeat;
   background-position: left;
 }
+.pre {
+  font-family: 'Montserrat',  'Comfortaa','Helvetica', 'Arial', sans-serif; 
+  font-size: 14px;
+}
 
 .header-email {
   padding-left: 30px;
