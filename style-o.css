@@ -23,6 +23,11 @@ body {
   padding: 32px 0 32px;
 }
 
+pre {
+  font-family: 'Montserrat',  'Comfortaa','Helvetica', 'Arial', sans-serif; 
+  font-size: 14px;
+}
+
 .page-header .container,
 .page-footer .container {
   max-width: 1408px;
@@ -35,10 +40,6 @@ body {
   text-decoration: none;
   background-repeat: no-repeat;
   background-position: left;
-}
-pre {
-  font-family: 'Montserrat',  'Comfortaa','Helvetica', 'Arial', sans-serif; 
-  font-size: 14px;
 }
 
 .header-email {
