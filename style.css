@@ -122,8 +122,21 @@ pre {
 
 .skill-jabka {
   background-image: url("img/jabka.webp");
+  height: 20px;
+  width:  20px;
 }
 
+.skill-csharp {
+  background-image: url("img/icon-csharp.svg");
+  height: 20px;
+  width:  20px;
+}
+
+.skill-python {
+  background-image: url("img/icon-python.svg");
+  height: 20px;
+  width:  20px;
+}
 .level {
   margin: 4px 0 16px;
   padding: 0;
