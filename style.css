@@ -238,23 +238,23 @@ pre {
 
 @media screen and (max-width: 472px) {
   .heading {    
-    font-size: 30px;    
+    font-size: 20px;    
   }
   .subheading {    
-    font-size: 15px;
+    font-size: 16px;
   }
   .portfolio h3 {    
-    font-size: 10px;
+    font-size: 16px;
   }
   .intro h3 {    
-    font-size: 10px;
+    font-size: 16px;
   }
 
   .intro p {    
-    font-size: 8px;
+    font-size: 12px;
   }
 
   body {    
-    font-size: 8px;
+    font-size: 12px;
   }
 }
