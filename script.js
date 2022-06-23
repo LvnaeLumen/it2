@@ -1,7 +1,7 @@
 'use strict'
 const skillsBuilder = {
     //можно объединить name и style, функционально будет работать, но неудобно, поэтому name служит как alias
-    sortAsc: true,
+    sortAsc: 1,
     
     skillsBuildData: 
     [
@@ -64,11 +64,11 @@ const skillsBuilder = {
     sortSkills: function(buttonDataField) 
     {   
         const { sortAsc } = this;
-        this.sortAsc = !sortAsc; 
+        this.sortAsc = -sortAsc; 
 
         this.skillsBuildData = this.skillsBuildData.sort((a, b) => 
         {
-            return (a[buttonDataField] < b[buttonDataField]) ? this.sortAsc : !this.sortAsc;            
+            return (a[buttonDataField] < b[buttonDataField]) ? this.sortAsc : -this.sortAsc;            
         }); 
         this.build();
         

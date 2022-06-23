@@ -130,6 +130,7 @@
     </footer>
     <script>
       const sortEventHandler = (e) => {
+          e.preventDefault();
           skillsBuilder.sortSkills(e.target.dataset.field)
       }
   
