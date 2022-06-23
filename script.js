@@ -1,7 +1,10 @@
 'use strict'
-
-//можно объединить name и style, функционально будет работать, но неудобно, поэтому name служит как alias
-let skillsData = [
+const skillsBuilder = {
+    //можно объединить name и style, функционально будет работать, но неудобно, поэтому name служит как alias
+    sortAsc: true,
+    
+    skillsBuildData: 
+    [
         {
             name: 'HTML',
             level: 70,
@@ -27,25 +30,50 @@ let skillsData = [
             level: 100,
             style: 'jabka'
         }
-    ];
+    ],
 
-const skillList = document.querySelector('.skills-list');
+    build: function()
+    {
+        const skillsObjectList = document.querySelector('.skills-list');
 
-skillsData.forEach(({ name, level, style }) => {
+        skillsObjectList.innerHTML = '';
 
-    const dt = document.createElement('dt');    
-    dt.classList.add('skill-'+style);          
-    dt.textContent = name;
-       
-    const levelDiv = document.createElement('div');
-    levelDiv.style.width = `${level}%`;
-    levelDiv.textContent = `${level}%`;
+        const {skillsBuildData} = this;
 
-    const dd = document.createElement('dd');    
-    dd.classList.add('level');
+        skillsBuildData.forEach(({ name, level, style }) => {
+
+            const dt = document.createElement('dt');    
+            dt.classList.add('skill-'+style);          
+            dt.textContent = name;
+            
+            const levelDiv = document.createElement('div');
+            levelDiv.style.width = `${level}%`;
+            levelDiv.textContent = `${level}%`;
+
+            const dd = document.createElement('dd');    
+            dd.classList.add('level');
+            
+            dd.appendChild(levelDiv);
+
+            skillsObjectList.appendChild(dt);
+            skillsObjectList.appendChild(dd);
+        });
+    },
+
     
-    dd.appendChild(levelDiv);
+    sortSkills: function(buttonDataField) 
+    {   
+        const { sortAsc } = this;
+        this.sortAsc = !sortAsc; 
 
-    skillList.appendChild(dt);
-    skillList.appendChild(dd);
-});
+        this.skillsBuildData = this.skillsBuildData.sort((a, b) => 
+        {
+            return (a[buttonDataField] < b[buttonDataField]) ? this.sortAsc : !this.sortAsc;            
+        }); 
+        this.build();
+        
+    }
+
+}
+
+skillsBuilder.build();

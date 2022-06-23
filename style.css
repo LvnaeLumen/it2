@@ -7,9 +7,11 @@ body {
   line-height: 1.5;
   color: #f2f2f2;
   background-color: #080208;
-  background-image: url("img/hero-bg.jpg");
+  background-image: url("img/spin-frog.gif");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: top center;  
+  background-size: 100%;  
+  background-clip: border-box;
 }
 
 img {
@@ -121,6 +123,7 @@ pre {
 .skills-list {
   margin: 0;
   padding: 0;
+  
 }
 
 .skills-list dt {
@@ -189,6 +192,7 @@ pre {
 }
 
 .button {
+  min-width: 300px;
   padding: 6px 20px;
   display: inline-block;
   vertical-align: baseline;
@@ -198,6 +202,16 @@ pre {
   background-color: #712073;
   color: #ffffff;
 }
+
+.button:hover {
+  background: rgb(27, 24, 70);  
+}
+
+.button:active {
+  transform: scale(0.90);
+  background: rgb(192, 17, 55);  
+}
+
 
 .page-footer {
   padding: 40px 0;
