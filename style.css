@@ -191,8 +191,7 @@ pre {
   margin: 0 0 24px;
 }
 
-.button {
-  min-width: 300px;
+.button {  
   padding: 6px 20px;
   display: inline-block;
   vertical-align: baseline;
@@ -269,6 +268,8 @@ pre {
   }
 
   body {    
+    
     font-size: 12px;
   }
+   
 }
