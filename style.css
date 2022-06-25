@@ -7,7 +7,7 @@ body {
   line-height: 1.5;
   color: #f2f2f2;
   background-color: #080208;
-  background-image: url("img/spin-frog.gif");
+  background-image: url("img/background.png");
   background-repeat: no-repeat;
   background-position: top center;  
   background-size: 100%;  
@@ -200,6 +200,7 @@ pre {
   border-radius: 4px;
   background-color: #712073;
   color: #ffffff;
+  
 }
 
 .button:hover {
@@ -270,6 +271,10 @@ pre {
   body {    
     
     font-size: 12px;
+  }
+  .sortbutton
+  {
+    min-width: 260px;
   }
    
 }
