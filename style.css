@@ -200,7 +200,8 @@ pre {
   border-radius: 4px;
   background-color: #712073;
   color: #ffffff;
-  
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .button:hover {

@@ -1,40 +1,21 @@
-fetch('db/skills.json')
-    .then(data => data.json())
-    .then(json => { console.log(json);} )
-    .catch(()=> console.error(" Вот что, сэр! Я буду говорить с вами откровенно! Мне не нравится эта экспедиция! Мне не нравятся эти матросы! И вообще.. что? Да! Нет! Мне вообще ничего не нравится, сэр!"));
-
 const skillsBuilder = {
     //можно объединить name и style, функционально будет работать, но неудобно, поэтому name служит как alias
     sortAsc: 1,
     
     skillsBuildData: 
-    [
-        {
-            name: 'HTML',
-            level: 70,
-            style: 'html'
-        },
-        {
-            name: 'CSS',
-            level: 50,
-            style: 'css'
-        },
-        {
-            name: 'Python',
-            level: 70,
-            style: 'python'
-        },
-        {
-            name: 'C#',
-            level: 90,
-            style: 'csharp'
-        },
-        {
-            name: 'Жабы',
-            level: 100,
-            style: 'jabka'
-        }
-    ],
+    [],
+
+    getData: async function()
+    {
+        await fetch('db/skills.json')
+        .then(data => data.json())
+        .then(json => { 
+            this.skillsBuildData = json;
+            skillsBuilder.build();
+        } )
+        .catch(()=> console.error(" Вот что, сэр! Я буду говорить с вами откровенно! Мне не нравится эта экспедиция! Мне не нравятся эти матросы! И вообще.. что? Да! Нет! Мне вообще ничего не нравится, сэр!"));
+        
+    },
 
     build: function()
     {
@@ -80,4 +61,4 @@ const skillsBuilder = {
 
 }
 
-skillsBuilder.build();
+skillsBuilder.getData()
