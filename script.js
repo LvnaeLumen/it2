@@ -1,4 +1,8 @@
-'use strict'
+fetch('db/skills.json')
+    .then(data => data.json())
+    .then(json => { console.log(json);} )
+    .catch(()=> console.error(" Вот что, сэр! Я буду говорить с вами откровенно! Мне не нравится эта экспедиция! Мне не нравятся эти матросы! И вообще.. что? Да! Нет! Мне вообще ничего не нравится, сэр!"));
+
 const skillsBuilder = {
     //можно объединить name и style, функционально будет работать, но неудобно, поэтому name служит как alias
     sortAsc: 1,

@@ -1,0 +1,27 @@
+[
+    {
+        "name": "HTML",
+        "level": 70,
+        "style": "html"
+    },
+    {
+        "name": "CSS",
+        "level": 50,
+        "style": "css"
+    },
+    {
+        "name": "Python",
+        "level": 70,
+        "style": "python"
+    },
+    {
+        "name": "C#",
+        "level": 90,
+        "style": "csharp"
+    },
+    {
+        "name": "Жабы",
+        "level": 100,
+        "style": "jabka"
+    }
+]
